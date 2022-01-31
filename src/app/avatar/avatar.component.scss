@@ -1,0 +1,103 @@
+.wrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+
+.ring {
+  width: fit-content;
+  border-radius: 50%;
+  position: relative;
+  padding: 17px;
+
+  &.with-image {
+    box-shadow: rgb(174 117 141 / 70%) 0px 0px 65px;
+    background: url(/assets/active.png),
+      radial-gradient(circle, rgb(174 117 141 / 13%), rgb(146 98 116 / 69%));
+    background-repeat: no-repeat;
+  }
+
+  &.no-image {
+    box-shadow: rgb(95 217 247 / 50%) 0px 0px 65px;
+    background: url(/assets/active.png),
+      radial-gradient(circle, rgb(95 217 247 / 13%), rgb(95 217 247 / 69%));
+    background-repeat: no-repeat;
+  }
+}
+
+.image {
+  width: 183px;
+  height: 183px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 8px #ffffff, 0 0 8px #fff;
+
+  .with-image & {
+    background: url(/assets/images.png) no-repeat;
+  }
+}
+
+.inner-glass {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  width: 184px;
+  height: 184px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .with-image & {
+    background: radial-gradient(
+      circle,
+      rgb(255 255 255 / 69%),
+      rgb(255 255 255 / 13%)
+    );
+    box-shadow: rgb(254 100 157 / 47%) 0px 0px 16px;
+    border: 1px px solid rgb(255 255 255 / 19%);
+  }
+
+  .no-image & {
+    // background: linear-gradient(
+    //   rgba(95, 217, 247, 0.13),
+    //   rgba(95, 217, 247, 0.69)
+    // );
+    background: radial-gradient(
+      farthest-corner at 10px 40px,
+      rgb(0 205 255 / 50%),
+      rgb(0 205 255 / 69%),
+      rgba(244, 102, 152, 0.71)
+    );
+    // background: radial-gradient(
+    //   farthest-side,
+    //   rgb(95 217 247 / 13%),
+    //   rgb(173, 13, 221, 0.42),
+    //   rgb(95 217 247 / 69%)
+    // );
+    box-shadow: rgb(95 217 247 / 47%) 0px 0px 16px;
+    border: 1px px solid rgb(255 255 255 / 19%);
+  }
+}
+
+.ring-glove {
+  width: 189px;
+  height: 189px;
+  position: absolute;
+  left: 50px;
+  right: 0;
+  top: -1rem;
+  border: 2px solid white;
+  filter: blur(169px);
+
+  .with-image & {
+    background: #ff00004f;
+  }
+
+  .no-image & {
+    // background: #5fd9f7;
+  }
+}
